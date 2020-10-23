@@ -1,7 +1,12 @@
 // main script file which typically controls the life cycle of the application
 const { app, BrowserWindow } = require('electron')
     // first importing the app and browserwindow module of tthe elctron package 
+const colors = require("colors")
+console.log(colors.rainbow('hello world!'));
+
 function createWindow() {
+    console.log("creating window");
+    console.log("getting started with electron js")
     const win = new BrowserWindow({
         width: 800,
         height: 600,
@@ -12,7 +17,7 @@ function createWindow() {
         webPreferences: {
             nodeintegeration: true
 
-        }
+        } // simple telling that adding nodejs to the electron project 
 
     })
     win.loadFile('index.html') // is used to load  index.html files 

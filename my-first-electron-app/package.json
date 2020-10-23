@@ -4,7 +4,8 @@
     "description": "",
     "main": "main.js",
     "scripts": {
-        "start": "electron ."
+        "start": "electron .",
+        "watch": "nodemon --exec electron ."
     },
     "keywords": [],
     "author": "",
@@ -13,6 +14,7 @@
         "electron": "^10.1.4"
     },
     "dependencies": {
+        "colors": "^1.4.0",
         "nodemon": "^2.0.6"
     }
 }
