@@ -1,0 +1,14 @@
+{
+    "name": "new",
+    "version": "1.0.0",
+    "description": "",
+    "main": "main.js",
+    "scripts": {
+        "start": "electron .",
+        "watch": "nodemon --exec electron .",
+        "reset": "git reset --hard"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC"
+}
