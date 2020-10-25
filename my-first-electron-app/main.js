@@ -1,7 +1,7 @@
 // main script file which typically controls the life cycle of the application
 const { app, BrowserWindow } = require('electron')
     // first importing the app and browserwindow module of tthe elctron package 
-const colors = require("colors")
+    // const colors = require("colors")
 console.log(colors.rainbow('hello world!'));
 
 function createWindow() {
@@ -21,7 +21,7 @@ function createWindow() {
 
     })
     win.loadFile('index.html') // is used to load  index.html files 
-    win.webContents.openDevTools()
+    win.webContents.openDevTools() // this line basically opens chrome devtools on which it is basically called on 
 }
 
 app.whenReady().then(createWindow) //Returns Promise<void> - fulfilled when Electron is initialized. May be used as a convenient alternative to checking app.isReady() and subscribing to the ready event if the app is not ready yet.
