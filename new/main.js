@@ -36,23 +36,34 @@ function createWindow() {
 // app.whenReady().then(createWindow) //Returns Promise<void> - fulfilled when Electron is initialized. May be used as a convenient alternative to checking app.isReady() and subscribing to the ready event if the app is not ready yet.
 // app.whenReady().then(createWindow)
 // below two functions are used to indicate your inside window or test
-app.on('browser-window-blur', () => {
-    console.log("app unfocsued");
-})
+// app.on('browser-window-blur', () => {
+//     console.log("app unfocsued");
+//     setTimeout(() => {
+//         app.quit() // this is used for quitting the windows rather than closing the window manually from iunside 
+
+//     }, 3000)
+// })
 
 
-app.on('browser-window-focus', () => {
-    console.log("app focsued");
-})
+// app.on('browser-window-focus', () => {
+//     console.log("app focsued");
+// })
 
-
-app.on('before-quit', e => {
-    console.log("Preventing all apps from closing");
-    e.preventDefault()
-})
+// if you want some action to take place before quitting then this the method to go for 
+// app.on('before-quit', e => {
+//     console.log("Preventing all apps from closing");
+//     e.preventDefault()
+// })
 
 app.on('ready', () => {
     console.log("app is ready")
+    console.log("current app path name" + app.getAppPath())
+        // getpath is used to certain files present int the system 
+    console.log(app.getPath('desktop'))
+    console.log(app.getPath('music'))
+    cosnole.log("getting current app version" + app.getName())
+    console.log(app.getPath('documents'))
+
     createWindow()
 
 })
