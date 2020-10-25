@@ -17,18 +17,19 @@ function createWindow() {
     console.log("creating window");
     console.log("getting started with electron js")
     const win = new BrowserWindow({
-        width: 800,
-        height: 600,
-        //         width Integer (optional) - Window's width in pixels. Default is 800.
-        // height Integer (optional) - Window's height in pixels. Default is 600.
-        // nodeIntegration Boolean (optional) - Whether node integration is enabled. Default is false.
+            width: 800,
+            height: 600,
+            //         width Integer (optional) - Window's width in pixels. Default is 800.
+            // height Integer (optional) - Window's height in pixels. Default is 600.
+            // nodeIntegration Boolean (optional) - Whether node integration is enabled. Default is false.
 
-        webPreferences: {
-            nodeintegeration: true
+            webPreferences: {
+                nodeintegeration: true
 
-        } // simple telling that adding nodejs to the electron project 
+            } // simple telling that adding nodejs to the electron project 
 
-    })
+        })
+        // win.loadURL("https://github.com/gokuljs")
     win.loadFile('index.html') // is used to load  index.html files 
     win.webContents.openDevTools() // this line basically opens chrome devtools on which it is basically called on 
 }
@@ -61,7 +62,7 @@ app.on('ready', () => {
         // getpath is used to certain files present int the system 
     console.log(app.getPath('desktop'))
     console.log(app.getPath('music'))
-    cosnole.log("getting current app version" + app.getName())
+        // cosnole.log("getting current app version" + app.getName
     console.log(app.getPath('documents'))
 
     createWindow()
